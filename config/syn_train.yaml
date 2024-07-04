@@ -11,14 +11,14 @@ train:
   dataset: ["synthtext"]
   ckpt_path: null
   eval_interval: 1000
-  batch_size: 5
+  batch_size: 1  # 5
   st_iter: 0
   end_iter: 50000
   lr: 0.0001
   lr_decay: 15000
   gamma: 0.2
   weight_decay: 0.00001
-  num_workers: 4
+  num_workers: 1
   amp: True
   loss: 3
   neg_rto: 1

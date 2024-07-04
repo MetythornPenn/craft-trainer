@@ -11,7 +11,7 @@ from tqdm import tqdm
 import wandb
 
 from config.load_config import load_yaml, DotDict
-from model.craft import CRAFT
+from modules.craft import CRAFT
 from metrics.eval_det_iou import DetectionIoUEvaluator
 from utils.inference_boxes import (
     test_net,

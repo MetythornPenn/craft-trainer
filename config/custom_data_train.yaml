@@ -3,7 +3,7 @@ wandb_opt: False
 results_dir: "./exp/"
 vis_test_dir: "./vis_result/"
 
-data_root_dir: "./data_root_dir/"
+data_root_dir: "./dataset/"
 score_gt_dir: None # "/data/ICDAR2015_official_supervision"
 mode: "weak_supervision"
 
@@ -14,7 +14,7 @@ train:
   synth_data_dir: "/data/SynthText/"
   synth_ratio: 5
   real_dataset: custom
-  ckpt_path: "./pretrained_model/CRAFT_clr_amp_29500.pth"
+  ckpt_path: "./model/pretrain/CRAFT_clr_amp_29500.pth"
   eval_interval: 1000
   batch_size: 5
   st_iter: 0
@@ -89,7 +89,7 @@ test:
   trained_model : null
   custom_data:
     test_set_size: 500
-    test_data_dir: "./data_root_dir/"
+    test_data_dir: "./dataset/"
     text_threshold: 0.75
     low_text: 0.5
     link_threshold: 0.2

@@ -15,7 +15,7 @@ import wandb
 from config.load_config import load_yaml, DotDict
 from data.dataset import SynthTextDataSet, CustomDataset
 from loss.mseloss import Maploss_v2, Maploss_v3
-from model.craft import CRAFT
+from modules.craft import CRAFT
 from eval import main_eval
 from metrics.eval_det_iou import DetectionIoUEvaluator
 from utils.util import copyStateDict, save_parser

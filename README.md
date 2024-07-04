@@ -1,4 +1,4 @@
-# CRAFT-train
+# CRAFT-trainer 
 On the official CRAFT github, there are many people who want to train CRAFT models. 
 
 However, the training code is not published in the official CRAFT repository. 
@@ -103,3 +103,9 @@ pip install -r requirements.txt
 | ------------- |-----|:-----:|:-----:|:-----:|-----:|
 | SynthText      |  ICDAR2013 | 0.801 | 0.748 | 0.773| <a href="https://drive.google.com/file/d/1enVIsgNvBf3YiRsVkxodspOn55PIK-LJ/view?usp=sharing">download link</a>|
 | SynthText + ICDAR2015      | ICDAR2015  | 0.909 | 0.794 | 0.848| <a href="https://drive.google.com/file/d/1qUeZIDSFCOuGS9yo8o0fi-zYHLEW6lBP/view">download link</a>|
+
+
+### Reference 
+- [Original craft model](https://github.com/clovaai/CRAFT-pytorch)
+- [this training code was customize from easyocr training code](https://github.com/JaidedAI/EasyOCR)
+
