@@ -3,7 +3,7 @@ wandb_opt: False
 results_dir: "./exp/"
 vis_test_dir: "./vis_result/"
 
-data_root_dir: "./dataset/"
+data_root_dir: "./CRAFT_data/"
 score_gt_dir: None # "/data/ICDAR2015_official_supervision"
 mode: "weak_supervision"
 
@@ -15,15 +15,15 @@ train:
   synth_ratio: 5
   real_dataset: custom
   ckpt_path: "./model/pretrain/CRAFT_clr_amp_29500.pth"
-  eval_interval: 1000
-  batch_size: 5
+  eval_interval: 100
+  batch_size: 50
   st_iter: 0
-  end_iter: 25000
+  end_iter: 1000 # 25000
   lr: 0.0001
   lr_decay: 7500
   gamma: 0.2
   weight_decay: 0.00001
-  num_workers: 0 # On single gpu, train.py execution only works when num worker = 0 / On multi-gpu, you can set num_worker > 0 to speed up
+  num_workers: 2 # On single gpu, train.py execution only works when num worker = 0 / On multi-gpu, you can set num_worker > 0 to speed up
   amp: True
   loss: 2
   neg_rto: 0.3
@@ -89,7 +89,7 @@ test:
   trained_model : null
   custom_data:
     test_set_size: 500
-    test_data_dir: "./dataset/"
+    test_data_dir: "./CRAFT_data/"
     text_threshold: 0.75
     low_text: 0.5
     link_threshold: 0.2

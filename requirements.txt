@@ -7,3 +7,4 @@ Shapely
 torch
 torchvision
 wandb
+tqdm

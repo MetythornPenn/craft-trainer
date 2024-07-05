@@ -44,7 +44,6 @@ def sidePoint(Apoint, Bpoint, h, w, placehold, enlarge_size):
     return int(x1), int(y1)
 
 def enlargebox(box, h, w, enlarge_size, horizontal_text_bool):
-
     if not horizontal_text_bool:
         enlarge_size = (enlarge_size[1], enlarge_size[0])
 
@@ -53,9 +52,14 @@ def enlargebox(box, h, w, enlarge_size, horizontal_text_bool):
     Apoint, Bpoint, Cpoint, Dpoint = box
     K1, B1 = lineBiasAndK(box[0], box[2])
     K2, B2 = lineBiasAndK(box[3], box[1])
-    X = (B2 - B1)/(K1 - K2)
-    Y = K1 * X + B1
-    center = [X, Y]
+    
+    if K1 == K2:
+        # If K1 is equal to K2, set center to an average point of the box
+        center = np.mean(box, axis=0)
+    else:
+        X = (B2 - B1) / (K1 - K2)
+        Y = K1 * X + B1
+        center = [X, Y]
 
     x1, y1 = sidePoint(Apoint, center, h, w, 'leftTop', enlarge_size)
     x2, y2 = sidePoint(center, Bpoint, h, w, 'rightTop', enlarge_size)

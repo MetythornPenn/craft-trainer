@@ -108,4 +108,5 @@ pip install -r requirements.txt
 ### Reference 
 - [Original craft model](https://github.com/clovaai/CRAFT-pytorch)
 - [this training code was customize from easyocr training code](https://github.com/JaidedAI/EasyOCR)
-
+- [fine tune craft](https://pub.towardsai.net/how-to-fine-tune-the-craft-model-in-easyocr-f9fa0ac5cc9d)
+- [sample craft dataset format](https://drive.google.com/drive/folders/1NUmjJAZWIUdor5gPRb7MN1QAuNS0QdfO)
